@@ -5,13 +5,11 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
 import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static com.freenow.android_demo.activities.Matchers.childAtPosition;
-import static com.freenow.android_demo.activities.ViewAction.waitId;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
@@ -28,8 +26,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.util.concurrent.TimeUnit;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -57,8 +53,6 @@ public class loginSuccessScenario extends loginToFreeNow {
     @Test
     public void searchDriverAndCall() throws InterruptedException {
         Thread.sleep(2000);
-        onView(isRoot()).perform(waitId(R.id.toolbar, TimeUnit.SECONDS.toMillis(15)));
-
         onView(withText("FREE NOW demo")).check(matches(isDisplayed()));
         try {
             onView (withId (R.id.textSearch))
