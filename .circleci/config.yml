@@ -29,7 +29,7 @@ jobs:
       # Specify the "test-command" parameter to customize the command run.
       - run:
           name: Run Test
-          command: ./gradlew connectedDebugAndroidTest
+          command: cd AndroidDemo && ./gradlew connectedDebugAndroidTest
       - android/save-gradle-cache:
           cache-prefix: v1a
 workflows:
