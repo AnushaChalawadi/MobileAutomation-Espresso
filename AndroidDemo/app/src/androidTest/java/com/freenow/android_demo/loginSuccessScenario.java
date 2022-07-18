@@ -52,7 +52,7 @@ public class loginSuccessScenario extends loginToFreeNow {
        */
     @Test
     public void searchDriverAndCall() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         onView(withText("FREE NOW demo")).check(matches(isDisplayed()));
         try {
             onView (withId (R.id.textSearch))
@@ -72,7 +72,7 @@ public class loginSuccessScenario extends loginToFreeNow {
 
 
         } catch (NoMatchingViewException e) {
-            Thread.sleep(5000);
+            onView(withId(R.id.toolbar)).check(matches(isDisplayed()));
             ViewInteraction appCompatImageButton = onView(
                     allOf(withContentDescription("Open navigation drawer"),
                             childAtPosition(
