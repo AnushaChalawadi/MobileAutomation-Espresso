@@ -4,6 +4,7 @@ orbs:
   android: circleci/android@1.0
 jobs:
   test:
+    working_directory: $CIRCLE_WORKING_DIRECTORY/AndroidDemo
     executor:
       name: android/android-machine
       resource-class: large
@@ -26,7 +27,6 @@ jobs:
           restore-gradle-cache-prefix: v1a
       # Runs "./gradlew connectedDebugAndroidTest" by default.
       # Specify the "test-command" parameter to customize the command run.
-      - run: cd AndroidDemo
       - android/run-tests
       - android/save-gradle-cache:
           cache-prefix: v1a
