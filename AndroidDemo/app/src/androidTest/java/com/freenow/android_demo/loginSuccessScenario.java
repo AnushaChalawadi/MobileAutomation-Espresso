@@ -31,7 +31,7 @@ import org.junit.runner.RunWith;
 @LargeTest
 public class loginSuccessScenario extends loginToFreeNow {
     private static final String searchText = "Sa";
-    private static final String driveName = "Same Martin";
+    private static final String driverName = "Same Martin";
 
     @Before
     public void loginBefore() {
@@ -58,7 +58,7 @@ public class loginSuccessScenario extends loginToFreeNow {
             onView (withId (R.id.textSearch))
                     .check (matches(isDisplayed()))
                     .perform (typeText(searchText));
-            onView(withText(driveName))
+            onView(withText(driverName))
                     .inRoot(RootMatchers.isPlatformPopup()).perform(click());
             // View is displayed
             System.out.println("Driver Search is Successful");
