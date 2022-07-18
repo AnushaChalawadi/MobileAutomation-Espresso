@@ -27,9 +27,6 @@ jobs:
           restore-gradle-cache-prefix: v1a
       # Runs "./gradlew connectedDebugAndroidTest" by default.
       # Specify the "test-command" parameter to customize the command run.
-      - run:
-          name: Run Test
-          command: cd AndroidDemo && pwd && ./gradlew connectedDebugAndroidTest
       - android/save-gradle-cache:
           cache-prefix: v1a
 workflows:
