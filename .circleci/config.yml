@@ -4,8 +4,9 @@ orbs:
   android: circleci/android@1.0
 jobs:
   test:
-    machine:
-      image: android-default
+    executor:
+      name: android/android-machine
+      resource-class: large
     steps:
       - checkout
       # Create an AVD named "myavd"
