@@ -6,34 +6,44 @@ Implemented the below given scenario for Android UI Tests using **Espresso**.
 
 ✏️ **Task**:
 
-1. Login case, the up-to-date credential (`username` & `password`) [here](https://randomuser.me/api/?seed=a1f30d446f820665)).
-2. Search for "***sa***", select the 2nd result (via the name, not the index) from the list, then click the call button.
-3. Test cases with invalid user credential , Validate the message with 'Login Failed' - Added an extra sceanrio.
+- Login case, the up-to-date credential (`username` & `password`) [here](https://randomuser.me/api/?seed=a--d-----)).
+- Search for "***sa***", select the -d result (via the name, not the index) from the list, then click the call button.
+- Test cases with invalid user credential , Validate the message with 'Login Failed' - Added an extra sceanrio.
+- Deployed the tests on CircleCI, link to the builds [here](https://app.circleci.com/pipelines/github/AnushaChalawadi/MobileAutomation-Espresso)
 
-🎈 **To Run any of the Testcases**: 
-Select File and hit on 'Run' Button.
+✏️ **Below are the possible scenarios Automation**:
 
-✏️ **Below are scenario can cover as part of Automation**:
-
-1. Enter an invalid password & click the login button. Verify if the user will get the correct 'Login failed' message.
-2. Enter an invalid Username and  invalid password & click the login button. Verify if the user will get the correct 'Login failed' message 
-3. Click on 'Login' button without Username and password. Verify if the user will get the correct 'Login failed' message.
-4. Search for an Driver name , then logout from app. Verify for the searched driver name once after re-login.
-5. Verify the functionality if can logout from app from the Driver profile.
-6. Verify if a user cannot log in with an invalid username or password. Check permutation and combinations of this.
-7. Search and select the driver’s name, press back from keyboard, Searched result should not be retained.
-8. Verify the name in Driver profile is expected from what selected.
-9. Navigate to search bar from Driver profile screen to search for other Driver's.
-10. Search for Driver name and logout from application, Verify the searched result after re-login as per the business requirement.
-11. Can verify Date as expected from the Driver profile screen.
-12. Can verify Driver location as expected from the Driver profile screen.
-13. Can verify response on Ui when double on call button from Driver profile screen.
+- Validate the Error message for an invalid password and click on login button.
+- Validate the Error message for an invalid Username and password.
+- Validate the Error message without user credentials when click on login button.
+- Verify for the searched driver name once after re-login.
+- Verify the functionality if can logout from app from the driver profile.
+- Verify if a user cannot log in with an invalid username or password. Check permutation and combinations of this.
+- Search and select the driver’s name, press back from keyboard, Verify the search results as per the business requirement.
+- Verify the driver name in driver profile is expected from what selected.
+- Navigate to search bar from driver profile screen to search for other drivers.
+- Search for driver name and logout from application, Verify the searched result after re-login as per the business requirement.
+- Verify Date as expected from the driver profile screen.
+- Verify driver location as expected from the driver profile screen.
+- Verify response on UI when double click on call button from driver profile screen.
 
 🎈 **Suggestions on UI**:
 
-1. Login button should look like Enable, currently looks like disabled form.
-2. Looks like there is more spaces is available in - Home screen(After search bar), Driver profile(After Driver details),
-   After Logout button wnen click on Menu, After login button in login screen.
+- Currently Login button looks like an disable, Can make changes on it.
+- All empty spaces can adjust in the application. Ex: After Logout button.
+- Provide an Mandatory message for Username and password field.
+- Doesn't perform any action when click on 'fab' icon
+
+ **Scenarios should be tested if the app has various kinds of users**
+
+- Verify the navigation between the modules is expected.
+- Validate the data does not goes off when user navidates from modules to modules.
+- Validate the performance of the application when more load is applied.
+- Verify the compatibity test on the application.
+- Verify the application in case of any interupt condition.
+- Verify the application is as expected in case of application upgrade.
+- Verify the session timeout scenarios.
+
 
 
 

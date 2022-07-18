@@ -51,8 +51,7 @@ public class loginSuccessScenario extends loginToFreeNow {
           8. If try block gets failed , then logout from application from catch block.
        */
     @Test
-    public void searchDriverAndCall() throws InterruptedException {
-        Thread.sleep(5000);
+    public void searchDriverAndCall() {
         onView(withText("FREE NOW demo")).check(matches(isDisplayed()));
         try {
             onView (withId (R.id.textSearch))
